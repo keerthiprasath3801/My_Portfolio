@@ -377,7 +377,7 @@ body {
 
 .projects-container {
     width: 100%;
-    max-width: 600px;
+    max-width: 500px;
     overflow: hidden;
     position: relative;
 }
@@ -406,7 +406,9 @@ body {
 
 .project p {
     margin-bottom: 1rem;
-    line-height: 1.6;
+    line-height: 1.60;
+    justify-content: center;
+    gap: 0.6rem;
 }
 
 .tech-stack {
@@ -414,7 +416,7 @@ body {
     justify-content: center;
     gap: 0.8rem;
     flex-wrap: wrap;
-    margin-bottom: 1.5rem;
+    margin-bottom: 1.3rem;
 }
 
 .tech-stack span {
@@ -1064,6 +1066,7 @@ body {
 /* Adjust carousel height */
 .projects-container {
     height: auto;
+    width: auto;
 }
 
 /* Responsive adjustments */
@@ -1076,6 +1079,7 @@ body {
 @media (max-width: 768px) {
     .project-image-frame {
         height: 200px;
+       
     }
 }
 
