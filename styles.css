@@ -1088,3 +1088,158 @@ body {
         height: 180px;
     }
 }
+/* Improved Project Content Styles */
+.projects-container {
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    padding: 0 10px; /* Added padding to prevent edge cutting */
+}
+
+.project {
+    width: calc(100% - 20px); /* Account for padding */
+    background: var(--glass-light);
+    border-radius: 8px;
+    border: 1px solid rgba(0, 240, 255, 0.2);
+    text-align: center;
+    transition: all 0.5s ease;
+    position: absolute;
+    opacity: 0;
+    margin: 0 10px; /* Added margin for better spacing */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+.project.active {
+    position: relative;
+    opacity: 1;
+}
+
+.project-content {
+    padding: 1.5rem;
+    background: var(--glass-light);
+    border-radius: 0 0 8px 8px;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+.project h3 {
+    color: var(--primary);
+    margin-bottom: 1rem;
+    font-size: 1.5rem; /* Slightly larger font */
+    word-break: break-word; /* Prevent long words from overflowing */
+}
+
+.project p {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    font-size: 0.95rem;
+    text-align: left; /* Better readability */
+    padding: 0 5px; /* Small padding for text */
+}
+
+.tech-stack {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 0.5rem; /* Smaller gap for mobile */
+    margin-bottom: 1.3rem;
+    padding: 0 5px; /* Padding to prevent edge cutting */
+}
+
+.tech-stack span {
+    background: rgba(0, 240, 255, 0.1);
+    color: var(--primary);
+    padding: 0.3rem 0.6rem; /* Slightly smaller padding */
+    border-radius: 20px;
+    font-size: 0.75rem; /* Smaller font for mobile */
+    white-space: nowrap; /* Prevent line breaks */
+}
+
+.project-links {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; /* Allow wrapping on small screens */
+    gap: 0.8rem;
+    padding: 0 5px; /* Padding to prevent edge cutting */
+}
+
+/* Improved Mobile Responsiveness */
+@media (max-width: 768px) {
+    .project-carousel {
+        padding: 0 5px; /* Ensure no horizontal scrolling */
+    }
+    
+    .project {
+        width: calc(100% - 10px); /* Adjust width for mobile */
+        margin: 0 5px;
+    }
+    
+    .project-content {
+        padding: 1rem;
+    }
+    
+    .project h3 {
+        font-size: 1.3rem;
+    }
+    
+    .project p {
+        font-size: 0.9rem;
+        text-align: center; /* Center text on mobile */
+    }
+    
+    .project-links {
+        gap: 0.5rem;
+    }
+    
+    .btn {
+        padding: 0.4rem 0.8rem; /* Smaller buttons on mobile */
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .project {
+        width: calc(100% - 10px);
+        margin: 0 5px;
+    }
+    
+    .project-content {
+        padding: 0.8rem;
+    }
+    
+    .tech-stack {
+        gap: 0.3rem;
+    }
+    
+    .tech-stack span {
+        padding: 0.2rem 0.5rem;
+        font-size: 0.7rem;
+    }
+    
+    .project-links {
+        flex-direction: row; /* Keep buttons side by side if space allows */
+        justify-content: space-around; /* Better spacing */
+    }
+    
+    .project-image-frame {
+        height: 150px;
+    }
+}
+
+/* Prevent horizontal scrolling on mobile */
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* Ensure modal doesn't cause overflow */
+.modal {
+    width: 95vw; /* Use viewport width */
+    box-sizing: border-box;
+}
+
+.modal-content {
+    width: 100%;
+    box-sizing: border-box;
+}
